@@ -5,9 +5,10 @@ export const config = {
     "database": process.env.POSTGRESS_DATABASE,
     "host": process.env.POSTGRESS_HOST,
     "dialect": "postgres",
-    "aws_reigion": "ap-northeast-2",
-    "aws_profile": "default",
-    "aws_media_bucket": "udagram-park-dev"
+    "aws_reigion": process.env.AWS_REGION,
+    "aws_profile": process.env.AWS_profile,
+    "aws_media_bucket": process.env.AWS_MEDIA_BUCKET,
+    "JWT_SECRET": process.env.JWT_SECRET
   },
   "prod": {
     "username": "",
@@ -15,5 +16,9 @@ export const config = {
     "database": "udagram_prod",
     "host": "",
     "dialect": "postgres"
+  },
+  "jwt":
+  {
+    "secret": "helloworld"
   }
 }
